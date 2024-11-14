@@ -1,0 +1,21 @@
+{
+  "name": "IndieCode",
+  "short_name": "IndieCode",
+  "description": "Aplicativo de notícias sobre projetos de desenvolvedores",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#00C795",
+  "theme_color": "#26FF00",
+  "icons": [
+    {
+      "src": "https://i.imgur.com/wnfOayZ.jpeg",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://i.imgur.com/wnfOayZ.jpeg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
