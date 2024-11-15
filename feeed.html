@@ -3,18 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IndieCode</title>
+    <title>IndieCode - Jogos e Atividades</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="app.json">
-<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "162a96ca-d755-4299-89a7-216d2dfe7a64",
-    });
-  });
-</script >
 </head>
 <body>
     <header>
@@ -22,7 +13,7 @@
     </header>
  <!-- Menu Lateral -->
     <nav id="sidebar">
-
+        
         <ul>
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="contato.html">Contato</a></li>
@@ -35,14 +26,14 @@
     <button class="menu-btn" onclick="toggleSidebar()">☰</button>
 
  <br><br>
- <div id="feed" onclick="toggleSidebar()">
+ <div id="feed" onclick="toggleSidebar2()">
    <h3>Vazio. ainda sem postagens</h3>
  </div>
     <div class="info-icon" onclick="showAlert()">i</div>
     <script src="info.js">info.js</script>
     <script src="main.js"></script>
 <script>
-
+  
   function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
     if (sidebar.style.width === "250px") {
@@ -52,23 +43,30 @@
     }
 }
 
+function toggleSidebar2() {
+    const sidebar = document.getElementById("sidebar");
+    if (sidebar.style.width === "250px") {
+        sidebar.style.width = "0";
+    }
+}
+
   function Compartilhar() {
     if(navigator.share) {
     navigator.share({
-
+      
       title: "indieCode",
       text: window.location.href 
-
-
+      
+      
     })
     } else {
-
+      
       alert("Seu navegador não tem compatibilidade para essa função")
-
+      
     }
-
+    
   }
-
+  
 </script>
 </body>
 </html>
