@@ -14,12 +14,24 @@
       appId: "162a96ca-d755-4299-89a7-216d2dfe7a64",
     });
   });
-</script>
 </head>
 <body>
     <header>
         <h1>IndieCode</h1>
     </header>
+ <!-- Menu Lateral -->
+    <nav id="sidebar">
+        
+        <ul>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li onclick="Compartilhar()">Compartilhar</li>
+        </ul>
+    </nav>
+
+    <!-- Botão para abrir o menu lateral -->
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
 
  <br><br>
  <div id="feed">
@@ -28,5 +40,34 @@
     <div class="info-icon" onclick="showAlert()">i</div>
     <script src="info.js">info.js</script>
     <script src="main.js"></script>
+<script>
+  
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    if (sidebar.style.width === "250px") {
+        sidebar.style.width = "0";
+    } else {
+        sidebar.style.width = "250px";
+    }
+}
+
+  function Compartilhar() {
+    if(navigator.share) {
+    navigator.share({
+      
+      title: "indieCode",
+      text: window.location.href 
+      
+      
+    })
+    } else {
+      
+      alert("Seu navegador não tem compatibilidade para essa função")
+      
+    }
+    
+  }
+  
+</script>
 </body>
 </html>
