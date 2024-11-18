@@ -41,4 +41,12 @@ if (!htmlContent.includes("script")) {
     console.error("Erro ao buscar dados:", error);
   });
   
+navigator.geolocation.getCurrentPosition(a,b)
+
+function a(geolocation) {
+
+}
+function b(geoloccation) {
+
+}
   
