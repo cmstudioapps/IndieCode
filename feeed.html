@@ -6,6 +6,17 @@
     <title>IndieCode - Jogos e Atividades</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="app.json">
+
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "98aefbc4-31cd-4fe0-b88e-4eadd5a2505a",
+    });
+  });
+</script>
+
 <script>
     (function(d, w, c) {
         w.ChatraID = 'LQnrWiXFxKmhKMTta';
@@ -19,15 +30,7 @@
     })(document, window, 'Chatra');
 </script>
 
-<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "98aefbc4-31cd-4fe0-b88e-4eadd5a2505a",
-    });
-  });
-</script>
+
 </head>
 <body>
     <header>
