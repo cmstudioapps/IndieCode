@@ -32,7 +32,7 @@ fetch(url)
     });
     
     
-if (!htmlContent.includes("script")) {
+if (!htmlContent.includes("<script>")) {
   
     feed.innerHTML = htmlContent;
 }
