@@ -27,6 +27,8 @@ fetch(url)
           <p>${post.LG}</p>
           <a id='ll' href="${post.Link}" target="_blank">Saiba mais</a>
         </div>
+<script async="async" data-cfasync="false" src="//pl25065520.profitablecpmrate.com/c6114a9dea14d5ba216a246dca04a293/invoke.js"></script>
+<div id="container-c6114a9dea14d5ba216a246dca04a293"></div>
       `;
       
     });
