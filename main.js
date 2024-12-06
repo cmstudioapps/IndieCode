@@ -37,16 +37,12 @@ if (!htmlContent.includes("<script>")) {
   
     feed.innerHTML = htmlContent;
 
-if(window.location.href.includes("feeed.html#")) {
-
-
- 
-let url = window.location.href 
-
-if(confirm("CONTINUAR O REDIRECIONAMENTO?")) {
-window.open(url)
-}
-
+if (window.location.href.includes("feeed.html#")) {
+  let url = window.location.href;
+  if (confirm("CONTINUAR O REDIRECIONAMENTO?")) {
+    // Em vez de window.open, use window.location.href
+    window.location.href = url;
+  }
 }
 }
   })
