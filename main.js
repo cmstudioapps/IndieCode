@@ -22,7 +22,7 @@ fetch(url)
       
       
       htmlContent += `
-        <div class="post">
+        <div class="post" id="${post.ID}">
           <img src="${post.IMG}" alt="Imagem do post" height="400px">
           <p>${post.LG}</p>
           <a id='ll' href="${post.Link}" target="_blank">Saiba mais</a>
