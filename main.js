@@ -36,6 +36,14 @@ fetch(url)
 if (!htmlContent.includes("<script>")) {
   
     feed.innerHTML = htmlContent;
+
+if(window.location.href.includes("feeed.html#")) {
+ 
+let url = window.location.href 
+
+window.open(url)
+
+}
 }
   })
   .catch(error => {
