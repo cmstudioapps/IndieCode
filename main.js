@@ -30,7 +30,15 @@ fetch(url)
         </div>
 <div id="container-c6114a9dea14d5ba216a246dca04a293"></div>
 
-<script>
+
+      `;
+      
+    });
+    
+    
+
+  
+    feed.innerHTML = htmlContent;
 
 function Compar(id) {
 
@@ -41,16 +49,6 @@ text: "https://chat-tuts.vercel.app/feeed.html#${id}"
 })
 
 }
-
-</script>
-      `;
-      
-    });
-    
-    
-
-  
-    feed.innerHTML = htmlContent;
 
 if (window.location.href.includes("feeed.html#")) {
   let url = window.location.href;
