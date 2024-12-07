@@ -36,7 +36,7 @@ fetch(url)
     window.Compar = function(id) {
       navigator.share({
         title: "",
-        text: `https://chat-tuts.vercel.app/feeed.html#${id}`
+        text: `https://indie-code.vercel.app/feeed.html#${id}`
       }).catch(error => console.error("Erro ao compartilhar:", error));
     };
 
