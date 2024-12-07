@@ -26,17 +26,17 @@ fetch(url)
           <img src="${post.IMG}" alt="Imagem do post" height="400px">
           <p>${post.LG}</p>
           <a id='ll' href="${post.Link}" target="_blank">Saiba mais</a><br>
-      <button onclick="Compartilhar()">Compartilhar</button>
+      <button onclick="Compar()">Compartilhar</button>
         </div>
 <div id="container-c6114a9dea14d5ba216a246dca04a293"></div>
 
 <script>
 
-function Compartilhar() {
+function Compar() {
 
 navigator.share({
 title: "",
-text: "https://chat-tuts.vercel.app/feed.html#${post.ID}"
+text: "https://chat-tuts.vercel.app/feeed.html#${post.ID}"
 
 })
 
