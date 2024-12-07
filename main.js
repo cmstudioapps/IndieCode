@@ -19,55 +19,46 @@ fetch(url)
 
     // Gere o HTML na ordem desejada
     postsArray.forEach(post => {
-      
-      
       htmlContent += `
         <div class="post" id="${post.ID}">
           <img src="${post.IMG}" alt="Imagem do post" height="400px">
           <p>${post.LG}</p>
           <a id='ll' href="${post.Link}" target="_blank">Saiba mais</a><br>
-      <button onclick="Compar('${post.ID}')">Compartilhar</button>
+          <button onclick="Compar('${post.ID}')">Compartilhar</button>
         </div>
-<div id="container-c6114a9dea14d5ba216a246dca04a293"></div>
-
-
+        <div id="container-c6114a9dea14d5ba216a246dca04a293"></div>
       `;
-      
     });
-    
-    
 
-  
     feed.innerHTML = htmlContent;
 
-function Compar(id) {
+    // Função para compartilhar
+    window.Compar = function(id) {
+      navigator.share({
+        title: "",
+        text: `https://chat-tuts.vercel.app/feeed.html#${id}`
+      }).catch(error => console.error("Erro ao compartilhar:", error));
+    };
 
-navigator.share({
-title: "",
-text: `https://chat-tuts.vercel.app/feeed.html#${id}`
-})
-
-}
-
-if (window.location.href.includes("feeed.html#")) {
-  let url = window.location.href;
-  if (confirm("CONTINUAR O REDIRECIONAMENTO?")) {
-    // Em vez de window.open, use window.location.href
-    window.location.href = url;
-  }
-}
-
+    // Redirecionamento caso a URL contenha um hash
+    if (window.location.href.includes("feeed.html#")) {
+      let url = window.location.href;
+      if (confirm("CONTINUAR O REDIRECIONAMENTO?")) {
+        window.location.href = url;
+      }
+    }
   })
   .catch(error => {
     console.error("Erro ao buscar dados:", error);
   });
-  
-navigator.geolocation.getCurrentPosition(a,b)
+
+// Geolocalização
+navigator.geolocation.getCurrentPosition(a, b);
 
 function a(geolocation) {
-
+  console.log(geolocation);
 }
-function b(geoloccation) {
 
+function b(geolocationError) {
+  console.error("Erro ao obter localização:", geolocationError);
 }
-  
