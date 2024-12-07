@@ -23,7 +23,7 @@ fetch(url)
         <div class="post" id="${post.ID}">
           <img src="${post.IMG}" alt="Imagem do post" height="400px">
           <p>${post.LG}</p>
-          <a id='ll' href="${post.Link}" target="_blank">Saiba mais</a><br>
+          <a id='ll' href="${post.Link}" target="_blank">Saiba mais</a><br><br>
           <button onclick="Compar('${post.ID}')">Compartilhar</button>
         </div>
         <div id="container-c6114a9dea14d5ba216a246dca04a293"></div>
