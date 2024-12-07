@@ -25,15 +25,30 @@ fetch(url)
         <div class="post" id="${post.ID}">
           <img src="${post.IMG}" alt="Imagem do post" height="400px">
           <p>${post.LG}</p>
-          <a id='ll' href="${post.Link}" target="_blank">Saiba mais</a>
+          <a id='ll' href="${post.Link}" target="_blank">Saiba mais</a><br>
+      <button onclick="Compartilhar()">Compartilhar</button>
         </div>
 <div id="container-c6114a9dea14d5ba216a246dca04a293"></div>
+
+<script>
+
+function Compartilhar() {
+
+navigator.share({
+title: "",
+text: "https://chat-tuts.vercel.app/feed.html#${post.ID}"
+
+})
+
+}
+
+</script>
       `;
       
     });
     
     
-if (!htmlContent.includes("<script>")) {
+
   
     feed.innerHTML = htmlContent;
 
@@ -44,7 +59,7 @@ if (window.location.href.includes("feeed.html#")) {
     window.location.href = url;
   }
 }
-}
+
   })
   .catch(error => {
     console.error("Erro ao buscar dados:", error);
