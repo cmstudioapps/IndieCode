@@ -44,8 +44,7 @@ function Compar(id) {
 
 navigator.share({
 title: "",
-text: "https://chat-tuts.vercel.app/feeed.html#${id}"
-
+text: `https://chat-tuts.vercel.app/feeed.html#${id}`
 })
 
 }
